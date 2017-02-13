@@ -18,6 +18,6 @@ Studies & Notes , for reference , have any mistakes please contact me, thanks!
 
 #### members/组内成员：
 
-> [小组成员](https://github.com/fullStackStudies/notes/graphs/contributors)
+> [小组成员](https://github.com/orgs/fullStackStudies/people)
 >
 
