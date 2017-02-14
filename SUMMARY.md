@@ -1,6 +1,6 @@
 # Summary
 
-* [Summary/概要](content/README.md)
+* [Summary/概要](README.md)
 * [Front End Development/前端开发](content/front-end-development.md)
   * [HTML and CSS](content/html-and-css.md)
   * [Responsive Design with Bootstrap/用Bootstrap进行响应式设计](content/responsive-design-with-bootstrapbootstrap.md)
