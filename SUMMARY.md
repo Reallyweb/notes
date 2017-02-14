@@ -11,7 +11,7 @@
   * [JSON APIs and Ajax](content/json-apis-and-ajax.md)
   * [Intermediate Algorithm Scripting/进阶算法](content/intermediate-algorithm-scripting.md)
   * [Advanced Algorithm Scripting/高级算法](content/advanced-algorithm-scripting.md)
-* [Data Visualization/数据可视化](content/data-visualization.md)
+* [Data Visualization/网页可视化](content/data-visualization.md)
   * [Sass](content/sass.md)
   * [D3](content/d3.md)
   * [React.js](content/react.js.md)
