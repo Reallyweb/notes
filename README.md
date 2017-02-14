@@ -1,10 +1,14 @@
 # full-stack Studies & Notes/全栈笔记
 
+---
+
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/full-stack-Studies)
 
 Studies & Notes , for reference , have any mistakes please contact me, thanks!
 
 个人学习整理，仅供参考，如有任何纰漏请及时反馈，谢谢！
+
+[click here take look notes/点击这里查看笔记](SUMMARY.md)
 
 #### Contact information/联系方式：
 
