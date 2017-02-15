@@ -18,6 +18,7 @@
   * [React.js](content/react.js.md)
   * [Angular.js](content/angular.js.md)
 * [Back End Development/后台开发](content/back-end-development.md)
+  * [PHP](content/php.md)
   * [Automated Testing and Debugging/自动化测试调试](content/automated-testing-and-debugging.md)
   * [Git](content/git.md)
   * [Node.js and Express.js](content/node.js-and-express.js.md)
