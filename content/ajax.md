@@ -28,4 +28,160 @@ AJAX 是一种用于创建快速动态网页的技术。
 对数据使用过滤器，按照时间排序，或者按照时间和名称排序，开关过滤器等等。任何要求具备很高交互性数据操纵的场合都应该用JavaScript，而不是用一系列的服务器请求来完成。在每次数据更新后，再对其进行查找和处理需要耗费较多的时间，而Ajax可以加速这个过程。
 ####文本输入场景
 在文本框等输入表单中给予输入提示，或者自动完成，可以有效的改善用户体验，尤其是那些自动完成的数据可能来自于服务器端的场合，Ajax是很好的选择。
+#创建AJAX对象
+创建对象
+`
+<script>
 
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+</script>    
+```
+向服务器发送请求
+
+请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法： 
+open(method,url,async)
+
+规定请求的类型、URL 以及是否异步处理请求。
+
+method：请求的类型；GET 或 POST
+url：文件在服务器上的位置
+async：true（异步）或 false（同步）
+send(string)
+
+将请求发送到服务器。
+
+string：仅用于 POST 请求
+
+GET 请求
+```
+xmlhttp.open("GET","demo_get.php",true);
+xmlhttp.send();
+```
+```
+xmlhttp.open("GET","demo_get2.asp?fname=Bill&lname=Gates",true);
+xmlhttp.send();
+```
+
+POST 请求 
+setRequestHeader(header,value)向请求添加 HTTP 头。
+
+header: 规定头的名称
+value: 规定头的值
+onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。 
+readyState 存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+
+0: 请求未初始化
+1: 服务器连接已建立
+2: 请求已接收
+3: 请求处理中
+4: 请求已完成，且响应已就绪
+status
+
+200: “OK”
+404: 未找到页面
+```
+xmlhttp.open("POST","demo_post.php",true);
+xmlhttp.send();
+```
+```
+xmlhttp.open("POST","ajax_test.php",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("fname=Bill&lname=Gates");
+```
+Async = true
+
+当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：
+```
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","test1.txt",true);
+xmlhttp.send();
+```
+sync = false 
+如需使用 async=false，请将 open() 方法中的第三个参数改为 false：
+```
+xmlhttp.open("GET","test1.txt",false);
+xmlhttp.send();
+document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+```
+
+响应
+
+responseText 获得字符串形式的响应数据。
+responseXML 获得 XML 形式的响应数据。
+```
+<script type="text/javascript">
+function loadXMLDoc()
+{
+var xmlhttp;
+var txt,x,i;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    xmlDoc=xmlhttp.responseXML;
+    txt="";
+    x=xmlDoc.getElementsByTagName("title");
+    for (i=0;i<x.length;i++)
+      {
+      txt=txt + x[i].childNodes[0].nodeValue + "<br />";
+      }
+    document.getElementById("myDiv").innerHTML=txt;
+    }
+  }
+xmlhttp.open("GET","/example/xmle/books.xml",true);
+xmlhttp.send();
+}
+</script>
+```
+请求的回调
+```
+<script type="text/javascript">
+var xmlhttp;
+function loadXMLDoc(url,cfunc)
+{
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=cfunc;
+xmlhttp.open("GET",url,true);
+xmlhttp.send();
+}
+function myFunction()
+{
+loadXMLDoc("/ajax/test1.txt",function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  });
+}
+</script>
+```
