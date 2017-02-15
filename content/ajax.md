@@ -56,19 +56,20 @@ AJAX 是一种用于创建快速动态网页的技术。
         }
 
     }
-    <!-- 等价于 -->
+    //等价方法
     xml.onload=function(){
-        console.log(xml.response);
-    }
+         console.log(xml.response);
+        }
 ```
 XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GET`还是`POST`，第二个参数指定URL地址，第三个参数指定是否使用异步，默认是true，所以不用写。
 注意，千万不要把第三个参数指定为`false`，否则浏览器将停止响应，直到AJAX请求完成。如果这个请求耗时10秒，那么10秒内你会发现浏览器处于“假死”状态。
 ```
-    xml.open("get","/api/categories/index.html",true);
+    xml.open("get","/content/index.html",true);
 ```
 最后调用`send()`方法才真正发送请求。GET请求不需要参数，POST请求需要把body部分以字符串或者FormData对象传进去。
 ```
     xml.send();
+
 ```
 
 ### 安全限制 
