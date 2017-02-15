@@ -38,11 +38,11 @@ AJAX 是一种用于创建快速动态网页的技术。
 
 # AJAX
 
-######获取信息
+####获取信息
 实例化xmlhttprequest 对象
 
 ```
-    new XMLHttpRequest;
+    new XMLHttpRequest();
     new ActiveXObject("Microsoft.XMLHTTP");//ie8以下兼容性写法
     var xml=window.XMLHttpRequest?new  XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP"); 
 ``` 
@@ -73,7 +73,7 @@ XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GE
     xml.send();
 
 ```
-######传递信息
+####传递信息
 
 
 
@@ -144,7 +144,7 @@ function getPrice() {
 
 就完成了跨域加载数据。
 
-### CORS {#cors}
+### CORS 
 
 如果浏览器支持HTML5，那么就可以一劳永逸地使用新的跨域策略：CORS了。
 
