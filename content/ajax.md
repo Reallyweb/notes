@@ -6,10 +6,6 @@ AJAX 是一种用于创建快速动态网页的技术。
 通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。  
 传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。  
 
-|  |  |
-| :--- | :--- |
-|  |  |
-
 # 应用场景
 
 ####表单驱动的交互
@@ -29,159 +25,32 @@ AJAX 是一种用于创建快速动态网页的技术。
 ####文本输入场景
 在文本框等输入表单中给予输入提示，或者自动完成，可以有效的改善用户体验，尤其是那些自动完成的数据可能来自于服务器端的场合，Ajax是很好的选择。
 #创建AJAX对象
-创建对象
-`
-<script>
-
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-</script>    
 ```
-向服务器发送请求
+//实例化xmlhttprequest 对象
+	new XMLHttpRequest;
+	new ActiveXObject("Microsoft.XMLHTTP");//ie8以下兼容性写法
+	var xml=window.XMLHttpRequest?new  XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP");  
+//当创建了XMLHttpRequest对象后，要先设置onreadystatechange的回调函数。在回调函数中，通常我们只需通过readyState === 4判断请求是否完成，如果已完成，再根据status === 200判断是否是一个成功的响应。
+	xml.onreadystatechang=function(){
+		alert(xml.readyState);   
+		if(xml.readyState==4){
+			if(xml.status==200){ 
+				console.log(xml.response);
+			}
+		}
+		
+	}
+	<!-- 等价于 -->
+	xml.onload=function(){
+		console.log(xml.response);
+	}
+//XMLHttpRequest对象的open()方法有3个参数，第一个参数指定是GET还是POST，第二个参数指定URL地址，第三个参数指定是否使用异步，默认是true，所以不用写。
+//注意，千万不要把第三个参数指定为false，否则浏览器将停止响应，直到AJAX请求完成。如果这个请求耗时10秒，那么10秒内你会发现浏览器处于“假死”状态。
+	xml.open("get","ajax1.html",true,"用户名","密码");
+//最后调用send()方法才真正发送请求。GET请求不需要参数，POST请求需要把body部分以字符串或者FormData对象传进去。
+	xml.send();
 
-请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法： 
-open(method,url,async)
-
-规定请求的类型、URL 以及是否异步处理请求。
-
-method：请求的类型；GET 或 POST
-url：文件在服务器上的位置
-async：true（异步）或 false（同步）
-send(string)
-
-将请求发送到服务器。
-
-string：仅用于 POST 请求
-
-GET 请求
-```
-xmlhttp.open("GET","demo_get.php",true);
-xmlhttp.send();
-```
-```
-xmlhttp.open("GET","demo_get2.asp?fname=Bill&lname=Gates",true);
-xmlhttp.send();
 ```
 
-POST 请求 
-setRequestHeader(header,value)向请求添加 HTTP 头。
 
-header: 规定头的名称
-value: 规定头的值
-onreadystatechange 存储函数（或函数名），每当 readyState 属性改变时，就会调用该函数。 
-readyState 存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
 
-0: 请求未初始化
-1: 服务器连接已建立
-2: 请求已接收
-3: 请求处理中
-4: 请求已完成，且响应已就绪
-status
-
-200: “OK”
-404: 未找到页面
-```
-xmlhttp.open("POST","demo_post.php",true);
-xmlhttp.send();
-```
-```
-xmlhttp.open("POST","ajax_test.php",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("fname=Bill&lname=Gates");
-```
-Async = true
-
-当使用 async=true 时，请规定在响应处于 onreadystatechange 事件中的就绪状态时执行的函数：
-```
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","test1.txt",true);
-xmlhttp.send();
-```
-sync = false 
-如需使用 async=false，请将 open() 方法中的第三个参数改为 false：
-```
-xmlhttp.open("GET","test1.txt",false);
-xmlhttp.send();
-document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-```
-
-响应
-
-responseText 获得字符串形式的响应数据。
-responseXML 获得 XML 形式的响应数据。
-```
-<script type="text/javascript">
-function loadXMLDoc()
-{
-var xmlhttp;
-var txt,x,i;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    xmlDoc=xmlhttp.responseXML;
-    txt="";
-    x=xmlDoc.getElementsByTagName("title");
-    for (i=0;i<x.length;i++)
-      {
-      txt=txt + x[i].childNodes[0].nodeValue + "<br />";
-      }
-    document.getElementById("myDiv").innerHTML=txt;
-    }
-  }
-xmlhttp.open("GET","/example/xmle/books.xml",true);
-xmlhttp.send();
-}
-</script>
-```
-请求的回调
-```
-<script type="text/javascript">
-var xmlhttp;
-function loadXMLDoc(url,cfunc)
-{
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=cfunc;
-xmlhttp.open("GET",url,true);
-xmlhttp.send();
-}
-function myFunction()
-{
-loadXMLDoc("/ajax/test1.txt",function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-    }
-  });
-}
-</script>
-```
