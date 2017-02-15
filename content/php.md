@@ -6,7 +6,7 @@ PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理�
 
 PHP 脚本可放置于文档中的任何位置。
 
-PHP 脚本以_&lt;?php_开头，以_?&gt;_结尾：
+PHP 脚本以`<?php`开头，以`?>`结尾：
 
 ```
 <?php

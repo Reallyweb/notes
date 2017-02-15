@@ -38,7 +38,7 @@ AJAX 是一种用于创建快速动态网页的技术。
 
 # AJAX
 
-####获取信息
+#####获取信息
 实例化xmlhttprequest 对象
 
 ```
@@ -73,8 +73,39 @@ XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GE
     xml.send();
 
 ```
-####传递信息
+#####传递信息
 
+php代码如下
+```
+<?php
+if($_GET["name"]=="zhangsan"){
+echo "OK";
+}else{
+echo "error";
+}
+?>
+```
+网页分两种情况，其中`GET`在`open()`中添加信息，`POST`需要在`send()中`添加信息并使用`setRequestHeader()`控制编码格式
+```
+// get
+xml.open("GET","php.php?name=zhangsan&age=12",true);
+xml.send();
+//post
+xml.open("POST","php.php"); 
+xml.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+xml.send("name=zhangsan&age=12");
+```
+中断传输`xml.abort()`
+休眠`php>sleep()`
+返回值类型可以`open()`后设置`xml.responseType()`来调整类型，默认是text.
+```
+xml.responseType()="Text";
+xml.responseXML();
+xml.responseType()="document";
+xml.responseType()="bolb";//二进制
+xml.responseType()="json";
+xml.responseType()="arraybuffer";
+```
 
 
 ### 安全限制 
