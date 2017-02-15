@@ -45,7 +45,7 @@ AJAX 是一种用于创建快速动态网页的技术。
     new ActiveXObject("Microsoft.XMLHTTP");//ie8以下兼容性写法
     var xml=window.XMLHttpRequest?new  XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP"); 
 ``` 
-当创建了XMLHttpRequest对象后，要先设置onreadystatechange的回调函数。在回调函数中，通常我们只需通过readyState === 4判断请求是否完成，如果已完成，再根据status === 200判断是否是一个成功的响应。
+当创建了`XMLHttpRequest`对象后，要先设置`onreadystatechange`的回调函数。在回调函数中，通常我们只需通过`readyState === 4`判断请求是否完成，如果已完成，再根据`status === 200`判断是否是一个成功的响应。
 ```
     xml.onreadystatechang=function(){
         alert(xml.readyState);   
@@ -60,12 +60,12 @@ AJAX 是一种用于创建快速动态网页的技术。
     xml.onload=function(){
         console.log(xml.response);
     }
-    ```
+```
 XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GET`还是`POST`，第二个参数指定URL地址，第三个参数指定是否使用异步，默认是true，所以不用写。
 注意，千万不要把第三个参数指定为`false`，否则浏览器将停止响应，直到AJAX请求完成。如果这个请求耗时10秒，那么10秒内你会发现浏览器处于“假死”状态。
 ```
     xml.open("get","/api/categories/index.html",true);
- ```
+```
 最后调用`send()`方法才真正发送请求。GET请求不需要参数，POST请求需要把body部分以字符串或者FormData对象传进去。
 ```
     xml.send();
