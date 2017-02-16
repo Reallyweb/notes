@@ -1,20 +1,20 @@
 # AJAX简介
 
 AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。  
-AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。  
-AJAX 是一种用于创建快速动态网页的技术。  
-通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。  
-传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。
+AJAX = 异步 `JavaScript`和`XML`（标准通用标记语言的子集）。  
+`AJAX` 是一种用于创建快速动态网页的技术。  
+通过在后台与服务器进行少量数据交换，`AJAX` 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。  
+传统的网页（不使用 `AJAX`）如果需要更新内容，必须重载整个网页页面。
 
 # 应用场景
 
 #### 表单驱动的交互
 
-传统的表单提交，在文本框输入内容后，点击按钮，后台处理完毕后，页面刷新，再回头检查是否刷新结果正确。使用Ajax，在点击sunmit按钮后，立刻进行异步处理，并在页面上快速显示了更新后的结果，这里没有整个页面刷新的问题。
+传统的表单提交，在文本框输入内容后，点击按钮，后台处理完毕后，页面刷新，再回头检查是否刷新结果正确。使用`Ajax`，在点击`sunmit`按钮后，立刻进行异步处理，并在页面上快速显示了更新后的结果，这里没有整个页面刷新的问题。
 
 #### 深层次的树的导航
 
-深层次的级联菜单（树）的遍历是一项非常复杂的任务，使用JavaScript来控制显示逻辑，使用Ajax延迟加载更深层次的数据可以有效的减轻服务器的负担。  
+深层次的级联菜单（树）的遍历是一项非常复杂的任务，使用`JavaScript`来控制显示逻辑，使用Ajax延迟加载更深层次的数据可以有效的减轻服务器的负担。  
 我们以前的对级联菜单的处理多数是这样的：  
 为了避免每次对菜单的操作引起的重载页面，不采用每次调用后台的方式，而是一次性将级联菜单的所有数据全部读取出来并写入数组，然后根据用户的操作用 JavaScript来控制它的子集项目的呈现，这样虽然解决了操作响应速度、不重载页面以及避免向服务器频繁发送请求的问题，但是如果用户不对菜单进行 操作或只对菜单中的一部分进行操作的话，那读取的数据中的一部分就会成为冗余数据而浪费用户的资源，特别是在菜单结构复杂、数据量大的情况下（比如菜单有 很多级、每一级菜又有上百个项目），这种弊端就更为突出。  
 如果在此案中应用Ajax后，结果就会有所改观：  
@@ -38,16 +38,19 @@ AJAX 是一种用于创建快速动态网页的技术。
 
 # AJAX
 
-#####获取信息
+##### 获取信息
+
 实例化xmlhttprequest 对象
 
-```
+```js
     new XMLHttpRequest();
     new ActiveXObject("Microsoft.XMLHTTP");//ie8以下兼容性写法
     var xml=window.XMLHttpRequest?new  XMLHttpRequest():new ActiveXObject("Microsoft.XMLHTTP"); 
-``` 
-当创建了`XMLHttpRequest`对象后，要先设置`onreadystatechange`的回调函数。在回调函数中，通常我们只需通过`readyState === 4`判断请求是否完成，如果已完成，再根据`status === 200`判断是否是一个成功的响应。
 ```
+
+当创建了`XMLHttpRequest`对象后，要先设置`onreadystatechange`的回调函数。在回调函数中，通常我们只需通过`readyState === 4`判断请求是否完成，如果已完成，再根据`status === 200`判断是否是一个成功的响应。
+
+```js
     xml.onreadystatechang=function(){
         alert(xml.readyState);   
         if(xml.readyState==4){
@@ -62,31 +65,27 @@ AJAX 是一种用于创建快速动态网页的技术。
          console.log(xml.response);
         }
 ```
+
 XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GET`还是`POST`，第二个参数指定URL地址，第三个参数指定是否使用异步，默认是true，所以不用写。
 
 注意，千万不要把第三个参数指定为`false`，否则浏览器将停止响应，直到AJAX请求完成。如果这个请求耗时10秒，那么10秒内你会发现浏览器处于“假死”状态。
-```
+
+```js
     xml.open("get","/content/index.html",true);
 ```
+
 最后调用`send()`方法才真正发送请求。GET请求不需要参数，POST请求需要把body部分以字符串或者FormData对象传进去。
-```
+
+```js
     xml.send();
+```
 
-```
-#####传递信息
+##### 传递信息
 
-php代码如下
-```
-<?php
-if($_GET["name"]=="zhangsan"){
-echo "OK";
-}else{
-echo "error";
-}
-?>
-```
-网页分两种情况，其中`GET`在`open()`中添加信息，`POST`需要在`send()中`添加信息并使用`setRequestHeader()`控制编码格式
-```
+
+网页分两种情况，其中`GET`在`open()`中添加信息，而`POST`需要在`send()中`添加信息并使用`setRequestHeader()`控制编码格式
+
+```js
 // get
 xml.open("GET","php.php?name=zhangsan&age=12",true);
 xml.send();
@@ -95,10 +94,21 @@ xml.open("POST","php.php");
 xml.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
 xml.send("name=zhangsan&age=12");
 ```
-中断传输`xml.abort()`
-休眠`php>sleep()`
-返回值类型可以`open()`后设置`xml.responseType()`来调整类型，默认是text.
+php代码如下
+
+```php
+<?php
+if($_GET["name"]=="zhangsan"){
+echo "OK";
+}else{
+echo "error";
+}
+?>
 ```
+ 
+返回值类型可以通过在`open()`后设置`xml.responseType()`来调整类型，默认为text.
+
+```js
 xml.responseType()="Text";
 xml.responseXML();
 xml.responseType()="document";
@@ -106,9 +116,93 @@ xml.responseType()="bolb";//二进制
 xml.responseType()="json";
 xml.responseType()="arraybuffer";
 ```
+每次进行ajax操作都会有很多重复的操作，在这里，我们可以对函数进行封装，使操作更加方便。
+```js
+/* ajax封装
+ * @param  {object} obj
+ * //obj包含以下内容 *为必须 []为可选
+ * obj.url链接地址          *
+ * obj.methodget获取方式    []默认使用get方式
+ * obj.data数据             []
+ * obj.success回调函数      []
+ * obj.datatype数据类型     []可接受text,xml,document,json
+ * obj.asynch是否异步       []
+ * obj.error状态
+ */
+function ajax(obj) {
+        //判断输入格式是否正确
+	if (typeof obj != "object") {
+		console.error("请输入正确的参数类型");
+		return false;
+	}
+	if (obj.url == undefined) {
+		console.error("请输入正确的地址");
+	}
+	//对数值进行初始化
+	var method = obj.method == undefined ? 'get' : obj.method;
+	var asynch = obj.asynch == undefined ? true : obj.asynch;
+	var dataType = obj.dataType == undefined ? 'text' : obj.dataType;
+	var data = obj.data;
+	var success = obj.success;
+	var error = obj.error;
+	var str = "";
+	//判断传入数值的类型，并进行相应操作
+	switch (typeof data) {
+	case "undefined":
+		;
+		break;
+	case "object":
+		for (var i in obj.data) {
+			str += i + '=' + obj.data[i] + '&'
+		}
+		str = str.slice(0, -1);
+		break;
+	case "string":
+		str = obj.data;
+		break;
+	}
+	//兼容的实例化XMLHttpRequest对象
+	var xml = window.XMLHttpRequest ? new XMLHttpRequest : new ActiveXObject("Microsoft.XMLHTTP");
+	if (method == "get") {
+		xml.open('get', obj.url + '?' + str, asynch);
+		xml.responseType = dataType;
+		xml.send(null);
+	} else {
+		xml.open('post', obj.url, asynch);
+		xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xml.responseType = dataType;
+		xml.send(str);
+	}
+	//通过修改onreadystatechange函数进行错误判断，处理xml类型数据
+	xml.onreadystatechange = function() {
+		if (xml.readyState == 4) {
+			if (xml.status == 200) {
+				var obj;
+				if (dataType == 'xml') {
+					obj = xml.responseXML;
+				} else {
+					obj = xml.response;
+				}
+				if (success) {
+					success(obj);
+				}
+			}
+			if (xml.status == 404) {
+				var info = "页面找不到";
+				error(info);
+			}
+			if (xml.status == 503) {
+				var info = "服务暂时不可用";
+				error(info);
+			}
+		}
+	}
+}
+ 
 
+```
 
-### 安全限制 
+### 安全限制
 
 上面代码的URL使用的是相对路径。如果把它改为`'http://www.sina.com.cn/'`，再运行，肯定报错。在Chrome的控制台里，还可以看到错误信息。
 
@@ -122,7 +216,7 @@ xml.responseType()="arraybuffer";
 
 二是通过在同源域名下架设一个代理服务器来转发，JavaScript负责把请求发送到代理服务器：
 
-```
+```js
 /proxy?url=http://www.sina.com.cn
 ```
 
@@ -130,13 +224,13 @@ xml.responseType()="arraybuffer";
 
 第三种方式称为JSONP，它有个限制，只能用GET请求，并且要求返回JavaScript。这种方式跨域实际上是利用了浏览器允许跨域引用JavaScript资源：
 
-```
+```js
 <script src="http://example.com/abc.js"></script>
 ```
 
 JSONP通常以函数调用的形式返回，例如，返回JavaScript内容如下：
 
-```
+```js
 foo('data');
 ```
 
@@ -150,7 +244,7 @@ refreshPrice({"0000001":{"code": "0000001", ... });
 
 因此我们需要首先在页面中准备好回调函数：
 
-```
+```js
 function refreshPrice(data) {
     var p = document.getElementById('test-jsonp');
     p.innerHTML = '当前价格：' +
@@ -163,7 +257,7 @@ function refreshPrice(data) {
 
 最后用getPrice\(\)函数触发：
 
-```
+```js
 function getPrice() {
     var
         js = document.createElement('script'),
@@ -175,7 +269,7 @@ function getPrice() {
 
 就完成了跨域加载数据。
 
-### CORS 
+### CORS
 
 如果浏览器支持HTML5，那么就可以一劳永逸地使用新的跨域策略：CORS了。
 
@@ -197,7 +291,7 @@ Origin表示本域，也就是浏览器当前页面的域。当JavaScript向外�
 
 无论你是否需要用JavaScript通过CORS跨域请求资源，你都要了解CORS的原理。最新的浏览器全面支持HTML5。在引用外域资源时，除了JavaScript和CSS外，都要验证CORS。例如，当你引用了某个第三方CDN上的字体文件时：
 
-```
+```css
 /* CSS */
 @font-face {
   font-family: 'FontAwesome';
@@ -209,7 +303,7 @@ Origin表示本域，也就是浏览器当前页面的域。当JavaScript向外�
 
 对于PUT、DELETE以及其他类型如`application/json`的POST请求，在发送AJAX请求之前，浏览器会先发送一个`OPTIONS`请求（称为preflighted请求）到这个URL上，询问目标服务器是否接受：
 
-```
+```php
 OPTIONS /path/to/resource HTTP/1.1
 Host: bar.com
 Origin: http://my.com
@@ -218,7 +312,7 @@ Access-Control-Request-Method: POST
 
 服务器必须响应并明确指出允许的Method：
 
-```
+```php
 HTTP/1.1 200 OK
 Access-Control-Allow-Origin: http://my.com
 Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS
