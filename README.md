@@ -8,7 +8,7 @@ Studies & Notes , for reference , have any mistakes please contact me, thanks!
 
 日常学习整理，仅供参考，如有任何纰漏请及时反馈，谢谢！
 
-[click here take look notes/点击这里查看笔记](SUMMARY.md)
+[click here take look notes/点击这里查看笔记](https://limbobark.gitbooks.io/note/content/)
 
 #### Contact information/联系方式：
 
