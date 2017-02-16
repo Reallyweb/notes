@@ -263,14 +263,14 @@ db.php文件代码
 ```html
 <?php
 $db=new mysqli("localhost","root","root","w1610");
+//db是访问数据库的对象
 $db->query("set names utf8");
-//db是访问数据库的对象，它有一个query方法，即根据指定的$sql查询语句去执行一个查询，并将结果返回给$db．
-
+//设置字符编码
 ?>
 ```
 1.php文件代码
 
-```
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -308,8 +308,10 @@ $db->query("set names utf8");
     </tr>
     <?php
       include "db.php";
+      //include语句会获取指定文件中存在的所有文本/代码/标记，并复制到使用 include 语句的文件中。
       $sql="select * from stu";
       $result=$db->query($sql);
+      //根据指定的$sql查询语句去执行一个查询，并将结果返回给$db．
       while ($row=$result->fetch_assoc()){
     ?>
           <tr>
