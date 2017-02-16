@@ -264,6 +264,8 @@ db.php文件代码
 <?php
 $db=new mysqli("localhost","root","root","w1610");
 $db->query("set names utf8");
+//db是访问数据库的对象，它有一个query方法，即根据指定的$sql查询语句去执行一个查询，并将结果返回给$db．
+
 ?>
 ```
 1.php文件代码
