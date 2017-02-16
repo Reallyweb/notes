@@ -8,7 +8,7 @@ PHP 脚本可放置于文档中的任何位置。
 
 PHP 脚本以`<?php`开头，以`?>`结尾：
 
-```
+```php
 <?php
 // 此处是 PHP 代码
 ?>
@@ -20,16 +20,19 @@ PHP 文件通常包含 HTML 标签以及一些 PHP 脚本代码。
 
 ### PHP 支持三种注释：
 
-```
+```php
 <!DOCTYPE html>
 <html>
 <body>
 <?php
 // 这是单行注释
+
 # 这也是单行注释
+
 /*这是多行注释块
 它横跨了
 多行*/
+
 ?>
 </body>
 </html>
@@ -39,7 +42,7 @@ PHP 文件通常包含 HTML 标签以及一些 PHP 脚本代码。
 
 在 PHP 中，所有用户定义的函数、类和关键词（例如 if、else、echo 等等）都对大小写不敏感。
 
-```
+```php
 <!DOCTYPE html>
 <html>
 <body>
@@ -64,7 +67,7 @@ PHP 没有创建变量的命令。
 变量名称不能以数字开头
 变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）
 变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）
-```
+```php
 <?php
 $x=5;
 $y=6;
@@ -88,7 +91,7 @@ static（静态）
 函数之外声明的变量拥有 Global 作用域，只能在函数以外进行访问。
 函数内部声明的变量拥有 LOCAL 作用域，只能在函数内部进行访问。
 下面的例子测试了带有局部和全局作用域的变量：
-```
+```php
 <?php
 $x=5; // 全局作用域
 
@@ -115,7 +118,7 @@ echo "变量 y 是：$y";
 #####PHP global 关键词
 global 关键词用于访问函数内的全局变量。
 要做到这一点，请在（函数内部）变量前面使用 global 关键词：
-```
+```php
 <?php
 $x=5;
 $y=10;
@@ -129,7 +132,7 @@ echo $y; // 输出 15
 ```
 PHP 同时在名为 $GLOBALS[index] 的数组中存储了所有的全局变量。下标存有变量名。这个数组在函数内也可以访问，并能够用于直接更新全局变量。
 上面的例子可以这样重写：
-```
+```php
 <?php
 $x=5;
 $y=10;
@@ -143,7 +146,7 @@ echo $y; // 输出 15
 #####PHP static 关键词
 通常，当函数完成/执行后，会删除所有变量。不过，有时我需要不删除某个局部变量。实现这一点需要更进一步的工作。
 要完成这一点，请在您首次声明变量时使用 static 关键词：
-```
+```php
 <?php
 function myTest() {
   static $x=0;
@@ -166,7 +169,7 @@ print - 只能输出一个字符串，并始终返回 1
 echo 是一个语言结构，有无括号均可使用：echo 或 echo()。
 ######显示字符串
 下面的例子展示如何用 echo 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：
-```
+```php
 <?php
 echo "<h2>PHP is fun!</h2>";
 echo "Hello world!<br>";
@@ -176,7 +179,7 @@ echo "This", " string", " was", " made", " with multiple parameters.";
 ```
 ######显示变量
 下面的例子展示如何用 echo 命令来显示字符串和变量：
-```
+```php
 <?php
 $txt1="Learn PHP";
 $txt2="W3School.com.cn";
@@ -192,7 +195,7 @@ echo "My car is a {$cars[0]}";
 print 也是语言结构，有无括号均可使用：print 或 print()。
 ######显示字符串
 下面的例子展示如何用 print 命令来显示不同的字符串（同时请注意字符串中能包含 HTML 标记）：
-```
+```php
 <?php
 print "<h2>PHP is fun!</h2>";
 print "Hello world!<br>";
@@ -201,7 +204,7 @@ print "I'm about to learn PHP!";
 ```
 ######显示变量
 下面的例子展示如何用 print 命令来显示字符串和变量：
-```
+```php
 <?php
 $txt1="Learn PHP";
 $txt2="W3School.com.cn";
