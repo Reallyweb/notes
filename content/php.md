@@ -259,6 +259,10 @@ print "My car is a {$cars[0]}";
 
 php操作mysql
 
+js里单引号和双引号无区别
+
+php 双引号功能比单引号多 单引号运行效率比双引号高
+
 db.php文件代码
 
 ```html
