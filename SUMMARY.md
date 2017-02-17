@@ -29,4 +29,5 @@
 * [Coding Interview Preparation/面试准备](content/coding-interview-preparation/README.md)
 * [Extensive Reading /拓展阅读](content/extensive-reading/README.md)
 * [Developer documentation/开发者文档](content/developer-documentation/README.md)
+  * [how to use gitbook/gitbook使用说明](content/developer-documentation/how-to-use-gitbook.md)
 
