@@ -260,15 +260,17 @@ print "My car is a {$cars[0]}";
 php操作mysql
 
 db.php文件代码
+
 ```html
 <?php
 $db=new mysqli("localhost","root","root","w1610");
-//db是访问数据库的对象
+//创建db访问数据库的对象,地址,用户名，密码，数据库名
 $db->query("set names utf8");
 //设置字符编码
 ?>
 ```
-1.php文件代码
+
+1.php文件代码,php和html可以混排；
 
 ```html
 <!doctype html>
@@ -311,7 +313,7 @@ $db->query("set names utf8");
       //include语句会获取指定文件中存在的所有文本/代码/标记，并复制到使用 include 语句的文件中。
       $sql="select * from stu";
       $result=$db->query($sql);
-      //根据指定的$sql查询语句去执行一个查询，并将结果返回给$db．
+      //根据指定的$sql查询语句去执行一个查询，并将结果返回给$db．赋给result；
       while ($row=$result->fetch_assoc()){
     ?>
           <tr>
@@ -329,6 +331,7 @@ $db->query("set names utf8");
 </body>
 </html>
 ```
+
 del.php文件代码
 
 ```php
@@ -341,3 +344,6 @@ del.php文件代码
  }
 ?>
 ```
+
+
+

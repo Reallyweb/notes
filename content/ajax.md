@@ -82,7 +82,6 @@ XMLHttpRequest对象的`open()`方法有3个参数，第一个参数指定是`GE
 
 ##### 传递信息
 
-
 网页分两种情况，其中`GET`在`open()`中添加信息，而`POST`需要在`send()中`添加信息并使用`setRequestHeader()`控制编码格式
 
 ```js
@@ -94,6 +93,7 @@ xml.open("POST","php.php");
 xml.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
 xml.send("name=zhangsan&age=12");
 ```
+
 php代码如下
 
 ```php
@@ -105,7 +105,7 @@ echo "error";
 }
 ?>
 ```
- 
+
 返回值类型可以通过在`open()`后设置`xml.responseType()`来调整类型，默认为text.
 
 ```js
@@ -116,90 +116,82 @@ xml.responseType()="bolb";//二进制
 xml.responseType()="json";
 xml.responseType()="arraybuffer";
 ```
+
 每次进行ajax操作都会有很多重复的操作，在这里，我们可以对函数进行封装，使操作更加方便。
+
 ```js
 /* ajax封装
  * @param  {object} obj
- * //obj包含以下内容 *为必须 []为可选
- * obj.url链接地址          *
- * obj.methodget获取方式    []默认使用get方式
- * obj.data数据             []
- * obj.success回调函数      []
- * obj.datatype数据类型     []可接受text,xml,document,json
- * obj.asynch是否异步       []
- * obj.error状态
  */
 function ajax(obj) {
-        //判断输入格式是否正确
-	if (typeof obj != "object") {
-		console.error("请输入正确的参数类型");
-		return false;
-	}
-	if (obj.url == undefined) {
-		console.error("请输入正确的地址");
-	}
-	//对数值进行初始化
-	var method = obj.method == undefined ? 'get' : obj.method;
-	var asynch = obj.asynch == undefined ? true : obj.asynch;
-	var dataType = obj.dataType == undefined ? 'text' : obj.dataType;
-	var data = obj.data;
-	var success = obj.success;
-	var error = obj.error;
-	var str = "";
-	//判断传入数值的类型，并进行相应操作
-	switch (typeof data) {
-	case "undefined":
-		;
-		break;
-	case "object":
-		for (var i in obj.data) {
-			str += i + '=' + obj.data[i] + '&'
-		}
-		str = str.slice(0, -1);
-		break;
-	case "string":
-		str = obj.data;
-		break;
-	}
-	//兼容的实例化XMLHttpRequest对象
-	var xml = window.XMLHttpRequest ? new XMLHttpRequest : new ActiveXObject("Microsoft.XMLHTTP");
-	if (method == "get") {
-		xml.open('get', obj.url + '?' + str, asynch);
-		xml.responseType = dataType;
-		xml.send(null);
-	} else {
-		xml.open('post', obj.url, asynch);
-		xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xml.responseType = dataType;
-		xml.send(str);
-	}
-	//通过修改onreadystatechange函数进行错误判断，处理xml类型数据
-	xml.onreadystatechange = function() {
-		if (xml.readyState == 4) {
-			if (xml.status == 200) {
-				var obj;
-				if (dataType == 'xml') {
-					obj = xml.responseXML;
-				} else {
-					obj = xml.response;
-				}
-				if (success) {
-					success(obj);
-				}
-			}
-			if (xml.status == 404) {
-				var info = "页面找不到";
-				error(info);
-			}
-			if (xml.status == 503) {
-				var info = "服务暂时不可用";
-				error(info);
-			}
-		}
-	}
+    //判断输入格式是否正确
+    if (typeof obj != "object") { //传入参数是否正确
+        console.error("请输入正确的参数类型");
+        return false;
+    }
+    if (obj.url == undefined) { //传入地址格式是否正确
+        console.error("请输入正确的地址");
+    }
+    //对数值进行初始化
+    var method = obj.method == undefined ? 'get' : obj.method; //string 使用何种方式传递get,post。默认为get
+    var asynch = obj.asynch == undefined ? true : obj.asynch; //boolean 是否进行异步,默认为true
+    var dataType = obj.dataType == undefined ? 'text' : obj.dataType; //string 传入的类型说明，默认为text
+    var data = obj.data; //string,json  传递的数据
+    var success = obj.success; //function 成功执行函数后的回调函数 
+    var error = obj.error; //错误状态说明
+    var str = ""; //储存传递数据
+    //判断传入数值的类型，并进行相应操作
+    switch (typeof data) {
+    case "undefined":
+        ;
+        break;
+    case "object":
+        for (var i in obj.data) {
+            str += i + '=' + obj.data[i] + '&'
+        }
+        str = str.slice(0, -1);
+        break;
+    case "string":
+        str = obj.data;
+        break;
+    }
+    //兼容的实例化XMLHttpRequest对象，并根据请求，数据类型的不同进行操作
+    var xml = window.XMLHttpRequest ? new XMLHttpRequest : new ActiveXObject("Microsoft.XMLHTTP");
+    if (method == "get") {
+        xml.open('get', obj.url + '?' + str, asynch);
+        xml.responseType = dataType;
+        xml.send(null);
+    } else {
+        xml.open('post', obj.url, asynch);
+        xml.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xml.responseType = dataType;
+        xml.send(str);
+    }
+    //通过修改onreadystatechange函数进行错误判断，处理xml类型数据
+    xml.onreadystatechange = function() {
+        if (xml.readyState == 4) {
+            if (xml.status == 200) {
+                var obj;
+                if (dataType == 'xml') {
+                    obj = xml.responseXML;
+                } else {
+                    obj = xml.response;
+                }
+                if (success) {
+                    success(obj);
+                }
+            }
+            if (xml.status == 404) {
+                var info = "页面找不到";
+                error(info);
+            }
+            if (xml.status == 503) {
+                var info = "服务暂时不可用";
+                error(info);
+            }
+        }
+    }
 }
- 
-
 ```
 
 ### 安全限制
