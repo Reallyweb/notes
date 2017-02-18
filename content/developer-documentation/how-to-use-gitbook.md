@@ -20,7 +20,7 @@
 
 ![](/assets/use-github.jpg)
 
-#####选择同步的github项目进行同步
+#####选择要同步的github项目进行同步
 
 ![](/assets/gitbook-select.jpg)
 ![](/assets/gitbook-syncing.jpg)
