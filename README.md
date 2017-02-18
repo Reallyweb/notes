@@ -2,8 +2,7 @@
 
 ---
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/full-stack-Studies)
-[download as pdf](https://www.gitbook.com/download/pdf/book/limbobark/note)
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/full-stack-Studies) [![shields](https://img.shields.io/badge/download-PDF-brightgreen.svg)](https://www.gitbook.com/download/pdf/book/limbobark/note)
 
 Studies & Notes , for reference , have any mistakes please contact me, thanks!
 
