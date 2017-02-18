@@ -3,7 +3,7 @@
 ---
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/full-stack-Studies)
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/d/nimelepbpejjlbmoobocpfnjhihnpked.svg)](https://www.gitbook.com/download/pdf/book/limbobark/note)
+[download as pdf](https://www.gitbook.com/download/pdf/book/limbobark/note)
 
 Studies & Notes , for reference , have any mistakes please contact me, thanks!
 
