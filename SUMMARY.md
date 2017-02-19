@@ -26,7 +26,7 @@
    * [PHP echo and print Statements/php Echo&Print](content/php/back-end-development/php-echo-and-print-Statements/README.md)
    * [PHP Data Types/php数据类型](content/back-end-development/php/php-data-types/README.md)
    * [PHP String/php字符串函数](content/back-end-development/php/php-string/README.md)
-   * [PHP Example/php实例](content/back-end-development/php/php-string/README.md)
+   * [PHP Example/php实例](content/back-end-development/php/example/README.md)
   * [Automated Testing and Debugging/自动化测试调试](content/back-end-development/automated-testing-and-debugging.md)
   * [Git](content/back-end-development/git.md)
   * [Node.js and Express.js](content/back-end-development/node.js-and-express.js.md)
