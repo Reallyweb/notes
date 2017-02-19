@@ -61,7 +61,6 @@ table.php
 ```
 ajax.js
 ```js
-```js
 /* ajax封装
  * @param  {object} obj
  */
