@@ -42,7 +42,7 @@ With PHP you are not limited to output HTML. You can output images, PDF files, a
 
 Why PHP?
 * PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)
-*PHP is compatible with almost all servers used today (Apache, IIS, etc.)
-*PHP supports a wide range of databases
-*PHP is free. Download it from the official PHP resource: www.php.net
-*PHP is easy to learn and runs efficiently on the server side
+* PHP is compatible with almost all servers used today (Apache, IIS, etc.)
+* PHP supports a wide range of databases
+* PHP is free. Download it from the official PHP resource: www.php.net
+* PHP is easy to learn and runs efficiently on the server side
