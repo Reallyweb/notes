@@ -89,6 +89,7 @@ Global and Local Scope
 A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function:
 
 Example
+```php
 <?php
 $x = 5; // global scope
 
@@ -100,10 +101,11 @@ myTest();
 
 echo "<p>Variable x outside function is: $x</p>";
 ?>
-Run example »
+```
 A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:
 
 Example
+```php
 <?php
 function myTest() {
     $x = 5; // local scope
@@ -114,7 +116,7 @@ myTest();
 // using x outside the function will generate an error
 echo "<p>Variable x outside function is: $x</p>";
 ?>
-Run example »
+```
 You can have local variables with the same name in different functions, because local variables are only recognized by the function in which they are declared.
 
 PHP The global Keyword
@@ -123,6 +125,7 @@ The global keyword is used to access a global variable from within a function.
 To do this, use the global keyword before the variables (inside the function):
 
 Example
+```php
 <?php
 $x = 5;
 $y = 10;
@@ -135,7 +138,7 @@ function myTest() {
 myTest();
 echo $y; // outputs 15
 ?>
-Run example »
+```
 PHP also stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. This array is also accessible from within functions and can be used to update global variables directly.
 
 The example above can be rewritten like this:
