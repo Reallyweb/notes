@@ -1,12 +1,12 @@
 #PHP 5 Installation
 
 
-What Do I Need?
+###What Do I Need?
 To start using PHP, you can:
 
-Find a web host with PHP and MySQL support
+* Find a web host with PHP and MySQL support
 Install a web server on your own PC, and then install PHP and MySQL
-Use a Web Host With PHP Support
+* Use a Web Host With PHP Support
 If your server has activated support for PHP you do not need to do anything.
 
 Just create some .php files, place them in your web directory, and the server will automatically parse them for you.
