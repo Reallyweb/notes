@@ -97,7 +97,7 @@ However; all variable names are case-sensitive.
 
 In the example below, only the first statement will display the value of the $color variable (this is because $color, $COLOR, and $coLOR are treated as three different variables):
 
-Example
+#####Example
 ```html
 <!DOCTYPE html>
 <html>
