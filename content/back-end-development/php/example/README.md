@@ -7,7 +7,7 @@ add.php
 ```php
 <?php
     sleep(1); //模拟服务器延时
-    include "header.php";
+    include "header.php"; //引入连接数据库单元
     $sql="insert into person (id,name,age,sex) values ('','','','')";
     $aa->query($sql);
     if($aa->affected_rows>0){
