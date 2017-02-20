@@ -8,7 +8,7 @@
   * [Object Oriented and Functional Programming/面向对象和函数](content/front-end-development/object-oriented-and-functional-programming.md)
   * [Basic Algorithm Scripting/基本算法](content/front-end-development/basic-algorithm-scripting.md)
   * [JSON APIs and Ajax](content/front-end-development/json-apis-and-ajax.md)
-    * [Ajax](content/front-end-development/ajax.md)
+    * [Ajax](content/front-end-development/ajax/README.md)
   * [Intermediate Algorithm Scripting/进阶算法](content/front-end-development/intermediate-algorithm-scripting.md) 
   * [Advanced Algorithm Scripting/高级算法](content/front-end-development/advanced-algorithm-scripting.md)
 * [Data Visualization/网页可视化](content/data-visualization/README.md)

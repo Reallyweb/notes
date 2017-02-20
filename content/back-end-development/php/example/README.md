@@ -6,7 +6,7 @@ add.php
 
 ```php
 <?php
-    sleep(1);
+    sleep(1); //模拟服务器延时
     include "header.php";
     $sql="insert into person (id,name,age,sex) values ('','','','')";
     $aa->query($sql);
