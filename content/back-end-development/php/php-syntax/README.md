@@ -18,7 +18,7 @@ A PHP file normally contains HTML tags, and some PHP scripting code.
 
 Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP function "echo" to output the text "Hello World!" on a web page:
 
-Example
+#####Example
 ```html
 <!DOCTYPE html>
 <html>
@@ -36,16 +36,17 @@ echo "Hello World!";
 
 Note: PHP statements end with a semicolon (;).
 
-Comments in PHP
+###Comments in PHP
 A comment in PHP code is a line that is not read/executed as part of the program. Its only purpose is to be read by someone who is looking at the code.
 
 Comments can be used to:
 
-Let others understand what you are doing
-Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. Comments can remind you of what you were thinking when you wrote the code
+* Let others understand what you are doing
+* Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. Comments can remind you of what you were thinking when you wrote the code
+
 PHP supports several ways of commenting:
 
-Example
+#####Example
 ```html
 <!DOCTYPE html>
 <html>
@@ -71,12 +72,12 @@ echo $x;
 </html>
 ```
 
-PHP Case Sensitivity
+###PHP Case Sensitivity
 In PHP, all keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are NOT case-sensitive.
 
 In the example below, all three echo statements below are legal (and equal):
 
-Example
+#####Example
 ```html
 <!DOCTYPE html>
 <html>
