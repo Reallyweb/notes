@@ -9,7 +9,7 @@ full-stack Studies & Notes/全栈笔记
    时间：  
 2017-02-12  ---  
    参与人员：  
-[limbobark](https://github.com/limbobark),[740641444](https://github.com/740641444),[c2017](https://github.com/c2017),[likaiweb](https://github.com/likaiweb),[zhangcuiZC](https://github.com/zhangcuiZC)
+[limbobark](https://github.com/limbobark),[740641444](https://github.com/740641444),[c2017](https://github.com/c2017),[likaiweb](https://github.com/likaiweb),[zhangcuiZC](https://github.com/zhangcuiZC),[雨落花香溢漫天](https://github.com/MrQingman)
 
 ## 文件夹结构
 
@@ -26,7 +26,6 @@ full-stack Studies & Notes/全栈笔记
 
 ## 规范
 
-
 文档的文件名不得含有空格。
 
 文件名必须使用半角字符，不得使用全角字符。这也意味着，中文不能用于文件名。
@@ -35,7 +34,6 @@ full-stack Studies & Notes/全栈笔记
 错误： 名词解释.md
 
 正确： glossary.md
-
 ```
 
 文件名建议只使用小写字母，不使用大写字母。
@@ -44,7 +42,6 @@ full-stack Studies & Notes/全栈笔记
 错误：TroubleShooting.md
 
 正确：troubleshooting.md 
-
 ```
 
 为了醒目，某些说明文件的文件名，可以使用大写字母，比如`README`、`LICENSE`。
@@ -56,7 +53,6 @@ full-stack Studies & Notes/全栈笔记
 
 正确：advanced-usage.md
 ```
-
 
 合作愉快！
 
