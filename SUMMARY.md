@@ -9,7 +9,7 @@
   * [Basic Algorithm Scripting/基本算法](content/front-end-development/basic-algorithm-scripting.md)
   * [JSON APIs and Ajax](content/front-end-development/json-apis-and-ajax.md)
     * [Ajax](content/front-end-development/ajax/README.md)
-  * [Intermediate Algorithm Scripting/进阶算法](content/front-end-development/intermediate-algorithm-scripting.md) 
+  * [Intermediate Algorithm Scripting/进阶算法 ](content/front-end-development/intermediate-algorithm-scripting.md)
   * [Advanced Algorithm Scripting/高级算法](content/front-end-development/advanced-algorithm-scripting.md)
 * [Data Visualization/网页可视化](content/data-visualization/README.md)
   * [Responsive Design with Bootstrap/Bootstrap响应式设计](content/data-visualization/responsive-design-with-bootstrapbootstrap.md)
@@ -38,6 +38,5 @@
 * [Extensive Reading /拓展阅读](content/extensive-reading/README.md)
 * [Developer documentation/开发者文档](content/developer-documentation/README.md)
   * [how to use gitbook/gitbook使用说明](content/developer-documentation/how-to-use-gitbook.md)
-
-
+* [notes](notes.md)
 
