@@ -1,6 +1,6 @@
 # Summary
 
-* - [ ] [Summary/概要](README.md)
+* - [x] [Summary/概要](README.md)
 * - [ ] [Front End Development/前端开发](content/front-end-development/README.md)
   * - [ ] [HTML and CSS](content/front-end-development/html-and-css.md)
   * - [ ] [jQuery](content/front-end-development/jquery.md)
