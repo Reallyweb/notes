@@ -5,7 +5,7 @@ Summary
  * [Front End Development/前端开发](content/front-end-development/README.md)
    * [HTML and CSS](content/front-end-development/html-and-css.md)
    * [jQuery](content/front-end-development/jquery.md)
-   * [Basic JavaScript/JavaScript基础](content/front-end-development/basic-javascript.md)
+   * [Basic JavaScript/JavaScript基础](content/front-end-development/basic-javascript/README.md)
    * [Object Oriented and Functional Programming/面向对象和函数](content/front-end-development/object-oriented-and-functional-programming.md)
    * [Basic Algorithm Scripting/基本算法](content/front-end-development/basic-javascript/README.md)
    * [JSON APIs and Ajax](content/front-end-development/json-apis-and-ajax.md)
