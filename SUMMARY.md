@@ -5,7 +5,7 @@
 * [Front End Development/前端开发](content/front-end-development/README.md)
   * [HTML and CSS](content/front-end-development/html-and-css.md)
   * [jQuery](content/front-end-development/jquery.md)
-  * [JavaScript](content/front-end-development/basic-javascript/README.md)
+  * [JavaScript](content/front-end-development/javascript/README.md)
   * [JSON APIs and Ajax](content/front-end-development/json-apis-and-ajax.md)
     * [Ajax](content/front-end-development/ajax/README.md)
 * [Data Visualization/网页可视化](content/data-visualization/README.md)
