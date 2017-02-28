@@ -3,6 +3,7 @@
 数据(mysql)      存储数据的容器或者逻辑
 后台语言(php)     组织者
 b/s架构的应用
+
 http是一种无状态协议，不会帮你记录任何客户端和服务器的连接状态  
 php md5加密md5\(""\)32位字符串  
 echo phpinfo\(\);返回php信息  
@@ -37,4 +38,14 @@ echo phpinfo\(\);返回php信息
 #MVC(编程架构)
 
 MVC(model模型 view视图 controller控制器)
+
+ * 模型Model – 管理大部分的业务逻辑和所有的数据库逻辑。模型提供了连接和操作数据库的抽象层。
+ * 控制器Controller - 负责响应用户请求、准备数据，以及决定如何展示数据。
+ * 视图View – 负责渲染数据，通过HTML方式呈现给用户。
+典型的Web MVC流程：
+
+1.Controller截获用户发出的请求；
+2.Controller调用Model完成状态的读写操作；
+3.Controller把数据传递给View；
+4.View渲染最终结果并呈献给用户。
 
