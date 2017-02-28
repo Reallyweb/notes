@@ -40,7 +40,8 @@ MVC\(model模型 view视图 controller控制器\)
 
 * 模型Model – 管理大部分的业务逻辑和所有的数据库逻辑。模型提供了连接和操作数据库的抽象层。
 * 控制器Controller - 负责响应用户请求、准备数据，以及决定如何展示数据。
-* 视图View – 负责渲染数据，通过HTML方式呈现给用户。![](/assets/web_mvc.gif)
+* 视图View – 负责渲染数据，通过HTML方式呈现给用户。
+![](/assets/web_mvc.gif)
 
 #### 典型的Web MVC流程：
 
@@ -49,3 +50,71 @@ MVC\(model模型 view视图 controller控制器\)
 3.Controller把数据传递给View；  
 4.View渲染最终结果并呈献给用户。
 
+core.php
+```php
+<?php 
+   class db{
+        public $hostname="localhost";//初始化服务器域名
+        public $dbname="1603class";// 数据库名称
+        private $username="root";
+        private $password="";
+        public $tablename="";  //要操作的表格的名称
+        private $connect; //连接db
+        public $files;  //保存一系列sql语句组合
+
+//        实例化db的时候可以传参数，表名
+        function __construct($tablename)
+        {
+            if(!isset($tablename)){
+                echo "请传入您要操作的表名";
+                exit;
+            }
+            $this->tablename=$tablename;
+//            连接数据库
+            $this->connect=new mysqli($this->hostname,$this->username,$this->password,$this->dbname);
+            $this->connect->query("set names utf8");
+
+//            初始化参数
+            $this->files['filed']=$this->files['filed']?$this->files['filed']:"*";
+            $this->files['where']="";
+
+        }
+
+        public function select($opt=""){
+//            组装sql语句
+            $sql=$opt===""?"select ".$this->files['filed']." from ".$this->tablename." ".$this->files['where']:"";
+
+//            执行sql语句
+            $result=$this->connect->query($sql);
+
+//            保存查询到的每一行数据到数组中
+            $arr=array();
+            while($row=$result->fetch_assoc()){
+                $arr[]=$row;
+            }
+
+            return $arr;
+        }
+
+//        $this->files['filed'] 表示查找谁 select与from中间的
+        public function filed($opt=""){
+//            $sql=$opt===""?"*":$opt;
+            $sql=$opt=$opt?$opt:"*";
+            $this->files['filed']=$sql;
+            return $this;
+        }
+
+//      $this->files['where']  表示在那  where
+        public function where($opt=""){
+            $this->files["where"]=$opt==""?"":"where ".$opt;
+            return $this;
+        }
+
+    }
+
+$db=new db("stu");
+$arr=$db->filed()->where("id=46")->select();
+var_dump($arr);
+
+ ?>
+ ```
