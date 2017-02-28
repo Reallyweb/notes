@@ -4,7 +4,11 @@
 b/s架构的应用
 
 http是一种无状态协议，不会帮你记录任何客户端和服务器的连接状态  
-php md5加密md5\(""\)32位字符串  
+php md5加密md5\(""\)32位字符串 
+`where type="something"` 只选择某类型
+`order by something desc`倒序排序某类型
+`order by something desc 0-3`倒序排序某类型只显示0到3
+`empty(var)`判断是否为空
 echo phpinfo\(\);返回php信息  
 主键：快速检索
 
