@@ -53,6 +53,7 @@ MVC\(model模型 view视图 controller控制器\)
 core.php
 ```php
 <?php 
+
    class db{
         public $hostname="localhost";//初始化服务器域名
         public $dbname="1603class";// 数据库名称
