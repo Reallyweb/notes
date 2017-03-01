@@ -11,7 +11,9 @@ php md5加密md5\(""\)32位字符串
 `empty(var)`判断是否为空
 `explode()`把字符串打散为数组
 `echo phpinfo()`返回php信息  
-
+单入口文件 安全 可调度 
+路由 
+`$_REQUSTE['']`接受无论post,get
 主键：快速检索
 
 ```css
