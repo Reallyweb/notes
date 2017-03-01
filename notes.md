@@ -11,8 +11,12 @@ php md5加密md5\(""\)32位字符串
 `empty(var)`判断是否为空
 `explode()`把字符串打散为数组
 `echo phpinfo()`返回php信息  
+`file_get_contents("demo.html")`以字符形式返回内容
+`file_put_contents("demo.html")`以字符形式插入内容
+
+`perg_match()`
 单入口文件 安全 可调度 
-路由 
+模板引擎:使用户界面与业务数据（内容）分离而产生的，它可以生成特定格式的文档，用于网站的模板引擎就会生成一个标准的HTML文档。
 `$_REQUSTE['']`接受无论post,get
 主键：快速检索
 
@@ -50,6 +54,19 @@ MVC\(model模型 view视图 controller控制器\)
 * 控制器Controller - 负责响应用户请求、准备数据，以及决定如何展示数据。
 * 视图View – 负责渲染数据，通过HTML方式呈现给用户。
 ![](/assets/web_mvc.gif)
+
+目录层级
+mvc  部署目录
+├─comple             模板引擎(自动生成)
+├─libs               核心框架目录
+├─module             配置文件目录
+├─template           视图目录
+│  ├─admin           后台目录
+│  ├─index           前台目录
+├─index.html         入口
+
+
+
 
 #### 典型的Web MVC流程：
 
