@@ -9,7 +9,8 @@ php md5加密md5\(""\)32位字符串
 `order by something desc`倒序排序某类型
 `order by something desc 0-3`倒序排序某类型只显示0到3
 `empty(var)`判断是否为空
-echo phpinfo\(\);返回php信息  
+`explode()`把字符串打散为数组
+`echo phpinfo()`返回php信息  
 主键：快速检索
 
 ```css
