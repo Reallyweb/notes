@@ -59,7 +59,9 @@ MVC\(model模型 view视图 controller控制器\)
 mvc 部署目录
 ├─comple 模板引擎(自动生成)
 ├─libs 配置文件目录
-│ ├─smarty ……
+│ ├─smarty 模板引擎
+│ ├─配置文件目录
+│ ├─smarty 模板引擎
 ├─module 模块目录
 │ ├─admin 后台模块目录
 │ ├─index 前台模块目录
