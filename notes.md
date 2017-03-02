@@ -60,12 +60,12 @@ mvc 部署目录
 ├─comple 模板引擎(自动生成)
 ├─libs 配置文件目录
 │ ├─smarty 模板引擎
-│ ├─配置文件目录
-│ ├─smarty 模板引擎
+│ ├─db.class 配置函数，数据库操作核心函数
+│ ├─route 单文件入口
 ├─module 模块目录
 │ ├─admin 后台模块目录
 │ ├─index 前台模块目录
-├─template 模版目录
+├─template 前台目录
 │ ├─admin 后台模版目录
 │ ├─index 前台模版目录
 ├─index.html 入口
