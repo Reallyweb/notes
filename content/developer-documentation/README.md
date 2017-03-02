@@ -17,7 +17,7 @@ full-stack Studies & Notes/全栈笔记
   \|--- assets/  所有引用格式资源\(eg:image.jpg\)  
   \|--- js/      库 \(eg:jquery-1.12.2.min.js\)   js文件  
   \|--- css/     样式 \(public.css\)  css文件  
-  \|--- content/-----------  
+  \|--- content/
   \|--- --- content/Module name folder 各模块文件夹  
   \|--- --- --- content/Module name folder/son Module name folder 子模块文件夹  
   \|--- --- --- content/Module name folder/son Module name.md 子模块文档  
