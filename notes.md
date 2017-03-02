@@ -55,7 +55,7 @@ MVC\(model模型 view视图 controller控制器\)
 * 视图View – 负责渲染数据，通过HTML方式呈现给用户。
 ![](/assets/web_mvc.gif)
 
-
+```
 mvc 部署目录
 ├─comple 模板引擎(自动生成)
 ├─libs 配置文件目录
@@ -69,7 +69,7 @@ mvc 部署目录
 │ ├─admin 后台模版目录
 │ ├─index 前台模版目录
 ├─index.html 入口
-
+```
 
 
 #### 典型的Web MVC流程：
