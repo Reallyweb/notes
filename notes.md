@@ -5,6 +5,7 @@ b/s架构的应用
 
 http是一种无状态协议，不会帮你记录任何客户端和服务器的连接状态  
 php md5加密md5\(""\)32位字符串 
+`$_SERVER`打印服务器信息
 `where type="something"` 只选择某类型
 `order by something desc`倒序排序某类型
 `order by something desc 0-3`倒序排序某类型只显示0到3
@@ -55,21 +56,24 @@ MVC\(model模型 view视图 controller控制器\)
 * 视图View – 负责渲染数据，通过HTML方式呈现给用户。
 ![](/assets/web_mvc.gif)
 
-
+```
 mvc 部署目录
 ├─comple 模板引擎(自动生成)
 ├─libs 配置文件目录
 │ ├─smarty 模板引擎
 │ ├─db.class 配置函数，数据库操作核心函数
 │ ├─route 单文件入口
+├─static 静态文件目录
 ├─module 模块目录
 │ ├─admin 后台模块目录
 │ ├─index 前台模块目录
 ├─template 前台目录
 │ ├─admin 后台模版目录
 │ ├─index 前台模版目录
-├─index.html 入口
+├─index.php 入口
+├─install.php 安装文件
 
+```
 
 
 #### 典型的Web MVC流程：
