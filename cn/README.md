@@ -1,4 +1,4 @@
-# full-stack Studies & Notes
+# 全栈笔记
 
 ---
 
@@ -12,22 +12,22 @@
 
 
 
-Studies & Notes , for reference , have any mistakes please contact me, thanks!
+日常学习整理，仅供参考，如有任何纰漏请及时反馈，谢谢！
 
-[click here take look notes](https://www.gitbook.com/read/book/limbobark/note)
+[点击这里查看笔记](https://limbobark.gitbooks.io/note/content/)
 
-#### Contact information：
+#### 联系方式：
 
-> gitter room：[gitter.im/full-stack-Studies](https://gitter.im/full-stack-Studies)
+> gitter频道：[gitter.im/full-stack-Studies](https://gitter.im/full-stack-Studies)
 >
-> gmail：[limbobark@gmail.com](https://limbobark@gmail.com)
+> 邮箱：[limbobark@gmail.com](https://limbobark@gmail.com)
 >
-> twitter：[@limbobark](https://twitter.com/limbobark)
+> 推特：[@limbobark](https://twitter.com/limbobark)
 >
-> facebook：[Limbo Bark](https://www.facebook.com/profile.php?id=100013482731137)
+> 脸书：[Limbo Bark](https://www.facebook.com/profile.php?id=100013482731137)
 
-#### members：
+#### 组内成员：
 
-> [members](https://github.com/orgs/fullStackStudies/people)
+> [小组成员](https://github.com/orgs/fullStackStudies/people)
 >
 
