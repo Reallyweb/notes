@@ -1,11 +1,10 @@
 # Summary
 
-* [Schedule/完成度](schedule.md)
 * [Summary/概要](README.md)
 * [Front End Development/前端开发](content/front-end-development/README.md)
   * [HTML and CSS](content/front-end-development/html-css/README.md)
-   * [HTML](content/front-end-development/html-css/html/README.md)
-   * [CSS](content/front-end-development/html-css/css/README.md)
+    * [HTML](content/front-end-development/html-css/html/README.md)
+    * [CSS](content/front-end-development/html-css/css/README.md)
   * [Bootstrap](content/front-end-development/bootstrap/README.md)
   * [JavaScript](content/front-end-development/javascript/README.md)
   * [jQuery](content/front-end-development/jquery/README.md)
