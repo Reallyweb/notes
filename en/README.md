@@ -2,7 +2,7 @@
 
 ---
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/full-stack-Studies) 
+[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/full-stack-Studies) 
 
 
 [![shields](https://img.shields.io/badge/README-CN-green.svg)](https://github.com/limbobark/notes/blob/master/cn/README.md)   [![shields](https://img.shields.io/badge/README-EN-green.svg)](https://github.com/limbobark/notes/blob/master/en/README.md)
