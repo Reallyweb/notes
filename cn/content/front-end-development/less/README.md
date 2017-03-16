@@ -242,6 +242,9 @@ div {
 .generate-columns(@n, @i: 1) when (@i =< @n) {
   .column-@{i} {
     width: (@i * 100% / @n);
+    
+    
+     
   }
   .generate-columns(@n, (@i + 1));
 }
