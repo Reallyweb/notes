@@ -217,3 +217,46 @@ Less中的范围与编程语言非常相似。变量和mixins首先在本地查�
 	border-radius: @num;
 }
 ```
+####循环
+
+```less
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1));    // next iteration
+  width: (10px * @counter); // code for each iteration
+}
+div {
+  .loop(5); // launch the loop
+}
+//生成以下代码
+div {
+  width: 10px;
+  width: 20px;
+  width: 30px;
+  width: 40px;
+  width: 50px;
+}
+```
+使用递归循环生成CSS网格类的一个通用示例：
+```less
+.generate-columns(4);
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+//生成以下代码
+
+.column-1 {
+  width: 25%;
+}
+.column-2 {
+  width: 50%;
+}
+.column-3 {
+  width: 75%;
+}
+.column-4 {
+  width: 100%;
+}
+```
