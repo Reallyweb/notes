@@ -10,4 +10,8 @@ less编程方式编写css，css预处理语言。基于node.js
 @声明变量:赋值
 eg:`@color:#999;``background:@color;`
 函数声明
-eg:``
+eg:```less 
+.raduis(@num){
+	border-radius: @num;
+}
+```
