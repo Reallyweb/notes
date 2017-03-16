@@ -7,10 +7,28 @@ css3发展缓慢，过程化编程
 
 less编程方式编写css，css预处理语言。基于node.js
 可以给边框设置圆角，
-@声明变量:赋值
-eg:`@color:#999;``background:@color;`
+变量
+eg:`@color:#999;``background:@color; //注意，变量实际上是“常量”，因为它们只能定义一次。` 
+混合
+eg:
+```less
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+#menu a {
+  color: #111;
+  .bordered;
+}
+
+.post a {
+  color: red;
+  .bordered;
+}
+```
 函数声明
-eg:```less 
+eg:
+```less
 .raduis(@num){
 	border-radius: @num;
 }
