@@ -5,6 +5,7 @@
   * [HTML and CSS](content/front-end-development/html-css/README.md)
     * [HTML](content/front-end-development/html-css/html/README.md)
     * [CSS](content/front-end-development/html-css/css/README.md)
+  * [Less](content/front-end-development/less/README.md)
   * [Bootstrap](content/front-end-development/bootstrap/README.md)
   * [JavaScript](content/front-end-development/javascript/README.md)
   * [jQuery](content/front-end-development/jquery/README.md)
