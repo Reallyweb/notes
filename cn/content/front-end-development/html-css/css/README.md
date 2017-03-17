@@ -6,10 +6,10 @@
 
 | 选择器 | 例子 | 例子描述 | CSS |
 | :--- | :--- | :--- | :--- |
-| [.class](http://www.w3school.com.cn/cssref/selector_class.asp) | .intro | 选择 class="intro" 的所有元素。 | 1 |
-| [\#id](http://www.w3school.com.cn/cssref/selector_id.asp) | \#firstname | 选择 id="firstname" 的所有元素。 | 1 |
-| [\*](http://www.w3school.com.cn/cssref/selector_all.asp) | \* | 选择所有元素。 | 2 |
-| [element](http://www.w3school.com.cn/cssref/selector_element.asp) | p | 选择所有 &lt;p&gt; 元素。 | 1 |
+| .class | .intro | 选择 class="intro" 的所有元素。 | 1 |
+| #id | \#firstname | 选择 id="firstname" 的所有元素。 | 1 |
+| *| 选择所有元素。 | 2 |
+| element | p | 选择所有 &lt;p&gt; 元素。 | 1 |
 | [element,element](http://www.w3school.com.cn/cssref/selector_element_comma.asp) | div,p | 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 | 1 |
 | [elementelement](http://www.w3school.com.cn/cssref/selector_element_element.asp) | div p | 选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。 | 1 |
 | [element&gt;element](http://www.w3school.com.cn/cssref/selector_element_gt.asp) | div&gt;p | 选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。 | 2 |
