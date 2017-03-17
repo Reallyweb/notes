@@ -30,9 +30,9 @@
 | [:after](http://www.w3school.com.cn/cssref/selector_after.asp) | p:after | 在每个 &lt;p&gt; 元素的内容之后插入内容。 | 2 |
 | [:lang\(language\)](http://www.w3school.com.cn/cssref/selector_lang.asp) | p:lang\(it\) | 选择带有以 "it" 开头的 lang 属性值的每个 &lt;p&gt; 元素。 | 2 |
 | [element1~element2](http://www.w3school.com.cn/cssref/selector_gen_sibling.asp) | p~ul | 选择前面有 &lt;p&gt; 元素的每个 &lt;ul&gt; 元素。 | 3 |
-| [\[attribute^=value\]](http://www.w3school.com.cn/cssref/selector_attr_begin.asp) | a\[src^="https"\] | 选择其 src 属性值以 "https" 开头的每个 &lt;a&gt; 元素。 | 3 |
-| [\[attribute$=value\]](http://www.w3school.com.cn/cssref/selector_attr_end.asp) | a\[src$=".pdf"\] | 选择其 src 属性以 ".pdf" 结尾的所有 &lt;a&gt; 元素。 | 3 |
-| [\[attribute\*=value\]](http://www.w3school.com.cn/cssref/selector_attr_contain.asp) | a\[src\*="abc"\] | 选择其 src 属性中包含 "abc" 子串的每个 &lt;a&gt; 元素。 | 3 |
+| [\[attribute^=value\]](http://www.w3school.com.cn/cssref/selector_attr_begin.asp) | a\[src^="https"\] | 选择其 src 属性值以 "https" 开头的每个 &lt;`a`&gt; 元素。 | 3 |
+| [\[attribute$=value\]](http://www.w3school.com.cn/cssref/selector_attr_end.asp) | a\[src$=".pdf"\] | 选择其 src 属性以 ".pdf" 结尾的所有 &lt;`a`&gt; 元素。 | 3 |
+| [\[attribute\*=value\]](http://www.w3school.com.cn/cssref/selector_attr_contain.asp) | a\[src\*="abc"\] | 选择其 src 属性中包含 "abc" 子串的每个 &lt;`a`&gt; 元素。 | 3 |
 | [:first-of-type](http://www.w3school.com.cn/cssref/selector_first-of-type.asp) | p:first-of-type | 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
 | [:last-of-type](http://www.w3school.com.cn/cssref/selector_last-of-type.asp) | p:last-of-type | 选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
 | [:only-of-type](http://www.w3school.com.cn/cssref/selector_only-of-type.asp) | p:only-of-type | 选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
