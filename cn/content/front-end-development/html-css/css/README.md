@@ -10,9 +10,9 @@
 | #id | \#firstname | 选择 id="firstname" 的所有元素。 | 1 |
 | *| 选择所有元素。 | 2 |
 | element | p | 选择所有 &lt;p&gt; 元素。 | 1 |
-| [element,element](http://www.w3school.com.cn/cssref/selector_element_comma.asp) | div,p | 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 | 1 |
-| [elementelement](http://www.w3school.com.cn/cssref/selector_element_element.asp) | div p | 选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。 | 1 |
-| [element&gt;element](http://www.w3school.com.cn/cssref/selector_element_gt.asp) | div&gt;p | 选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。 | 2 |
+| element,element | div,p | 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 | 1 |
+| elementelement | div p | 选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。 | 1 |
+| element&gt;element | div&gt;p | 选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。 | 2 |
 | [element+element](http://www.w3school.com.cn/cssref/selector_element_plus.asp) | div+p | 选择紧接在 &lt;div&gt; 元素之后的所有 &lt;p&gt; 元素。 | 2 |
 | [\[attribute\]](http://www.w3school.com.cn/cssref/selector_attribute.asp) | \[target\] | 选择带有 target 属性所有元素。 | 2 |
 | [\[attribute=value\]](http://www.w3school.com.cn/cssref/selector_attribute_value.asp) | \[target=\_blank\] | 选择 target="\_blank" 的所有元素。 | 2 |
