@@ -13,15 +13,15 @@
 | element,element | div,p | 选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 | 1 |
 | elementelement | div p | 选择 &lt;div&gt; 元素内部的所有 &lt;p&gt; 元素。 | 1 |
 | element&gt;element | div&gt;p | 选择父元素为 &lt;div&gt; 元素的所有 &lt;p&gt; 元素。 | 2 |
-| [element+element](http://www.w3school.com.cn/cssref/selector_element_plus.asp) | div+p | 选择紧接在 &lt;div&gt; 元素之后的所有 &lt;p&gt; 元素。 | 2 |
-| [\[attribute\]](http://www.w3school.com.cn/cssref/selector_attribute.asp) | \[target\] | 选择带有 target 属性所有元素。 | 2 |
-| [\[attribute=value\]](http://www.w3school.com.cn/cssref/selector_attribute_value.asp) | \[target=\_blank\] | 选择 target="\_blank" 的所有元素。 | 2 |
-| [\[attribute~=value\]](http://www.w3school.com.cn/cssref/selector_attribute_value_contain.asp) | \[title~=flower\] | 选择 title 属性包含单词 "flower" 的所有元素。 | 2 |
-| [\[attribute\|=value\]](http://www.w3school.com.cn/cssref/selector_attribute_value_start.asp) | \[lang\|=en\] | 选择 lang 属性值以 "en" 开头的所有元素。 | 2 |
-| [:link](http://www.w3school.com.cn/cssref/selector_link.asp) | a:link | 选择所有未被访问的链接。 | 1 |
-| [:visited](http://www.w3school.com.cn/cssref/selector_visited.asp) | a:visited | 选择所有已被访问的链接。 | 1 |
-| [:active](http://www.w3school.com.cn/cssref/selector_active.asp) | a:active | 选择活动链接。 | 1 |
-| [:hover](http://www.w3school.com.cn/cssref/selector_hover.asp) | a:hover | 选择鼠标指针位于其上的链接。 | 1 |
+| element+element | div+p | 选择紧接在 &lt;div&gt; 元素之后的所有 &lt;p&gt; 元素。 | 2 |
+| attribute | \[target\] | 选择带有 target 属性所有元素。 | 2 |
+| attribute=value | \[target=\_blank\] | 选择 target="\_blank" 的所有元素。 | 2 |
+| attribute~=value | \[title~=flower\] | 选择 title 属性包含单词 "flower" 的所有元素。 | 2 |
+|attribute\|=value | \[lang\|=en\] | 选择 lang 属性值以 "en" 开头的所有元素。 | 2 |
+| :link | a:link | 选择所有未被访问的链接。 | 1 |
+| :visited | a:visited | 选择所有已被访问的链接。 | 1 |
+| :active | a:active | 选择活动链接。 | 1 |
+| :hover | a:hover | 选择鼠标指针位于其上的链接。 | 1 |
 | [:focus](http://www.w3school.com.cn/cssref/selector_focus.asp) | input:focus | 选择获得焦点的 input 元素。 | 2 |
 | [:first-letter](http://www.w3school.com.cn/cssref/selector_first-letter.asp) | p:first-letter | 选择每个 &lt;p&gt; 元素的首字母。 | 1 |
 | [:first-line](http://www.w3school.com.cn/cssref/selector_first-line.asp) | p:first-line | 选择每个 &lt;p&gt; 元素的首行。 | 1 |
