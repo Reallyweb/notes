@@ -30,7 +30,7 @@ less编程方式编写css，是css的预处理语言。基于`node.js`
 ```
 ####嵌套规则
 Less能够使用嵌套，而不是级联，或者与级联组合使用。
-```less
+```less\l
 #header {
   color: black;
   .navigation {
