@@ -68,7 +68,7 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。
 * 规定您希望把效果添加到哪个 CSS 属性上
 * 规定效果的时长
 
-实例
+
 应用于宽度属性的过渡效果，时长为 2 秒：
 ```css
 div
@@ -81,19 +81,18 @@ transition: width 2s;
 ```
 注释：如果时长未规定，则不会有过渡效果，因为默认值是 0。
 效果开始于指定的 CSS 属性改变值时。CSS 属性改变的典型时间是鼠标指针位于元素上时：
-实例
-规定当鼠标指针悬浮于 <div> 元素上时：
+
+当鼠标指针悬浮于 <div> 元素上时：
 ```css
 div:hover
 {
 width:300px;
 }
 ```
-
 注释：当指针移出元素时，它会逐渐变回原来的样式。
 多项改变
 如需向多个样式添加过渡效果，请添加多个属性，由逗号隔开：
-实例
+
 向宽度、高度和转换添加过渡效果：
 ```css
 div
@@ -188,7 +187,7 @@ transform: rotate(30deg);
 }
 ```
 
-translate() 方法
+#####translate() 方法
 通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：
 ```css
 div
@@ -201,7 +200,7 @@ transform: translate(50px,100px);
 }
 ```
 
-rotate() 方法
+#####rotate() 方法
 通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。
 ```css
 div
@@ -214,7 +213,7 @@ transform: rotate(30deg);
 }
 ```
 
-scale() 方法
+#####scale() 方法
 通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：
 ```css
 div
@@ -227,7 +226,7 @@ transform: scale(2,4);
 }
 ```
 
-skew() 方法
+#####skew() 方法
 通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：
 ```css
 div
@@ -240,7 +239,7 @@ transform: skew(30deg,20deg);
 }
 ```
 
-matrix() 方法
+#####matrix() 方法
 matrix() 方法把所有 2D 转换方法组合在一起。
 matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。
 使用 matrix 方法将 div 元素旋转 30 度：
@@ -256,21 +255,39 @@ transform:matrix(0.866,0.5,-0.5,0.866,0,0);
 ```
 
 下面的表格列出了所有的转换属性：
-属性	描述	CSS
-transform	向元素应用 2D 或 3D 转换。	3
-transform-origin	允许你改变被转换元素的位置。	3
-2D Transform 方法
-函数	描述
-matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。
-translate(x,y)	定义 2D 转换，沿着 X 和 Y 轴移动元素。
-translateX(n)	定义 2D 转换，沿着 X 轴移动元素。
-translateY(n)	定义 2D 转换，沿着 Y 轴移动元素。
-scale(x,y)	定义 2D 缩放转换，改变元素的宽度和高度。
-scaleX(n)	定义 2D 缩放转换，改变元素的宽度。
-scaleY(n)	定义 2D 缩放转换，改变元素的高度。
-rotate(angle)	定义 2D 旋转，在参数中规定角度。
-skew(x-angle,y-angle)	定义 2D 倾斜转换，沿着 X 和 Y 轴。
-skewX(angle)	定义 2D 倾斜转换，沿着 X 轴。
-skewY(angle)	定义 2D 倾斜转换，沿着 Y 轴。
+
+| 属性 | 描述 | CSS |
+| :--- | :--- | :--- |
+| transform | 向元素应用 2D 或 3D 转换。 | 3 |
+| transform-origin | 允许你改变被转换元素的位置。 | 3 |
+
+#####2D Transform 方法
+
+| 函数 | 描述 |
+| :--- | :--- | 
+| matrix(n,n,n,n,n,n) | 定义 2D 转换，使用六个值的矩阵。| 
+| translate(x,y)| 定义 2D 转换，沿着 X 和 Y 轴移动元素。| 
+| translateX(n)|定义 2D 转换，沿着 X 轴移动元素。| 
+| translateY(n)| 定义 2D 转换，沿着 Y 轴移动元素。| 
+| scale(x,y)| 定义 2D 缩放转换，改变元素的宽度和高度。| 
+| scaleX(n)| 定义 2D 缩放转换，改变元素的宽度。| 
+| scaleY(n)| 定义 2D 缩放转换，改变元素的高度。| 
+| rotate(angle)| 定义 2D 旋转，在参数中规定角度。| 
+| skew(x-angle,y-angle)| 定义 2D 倾斜转换，沿着 X 和 Y 轴。| 
+| skewX(angle)| 定义 2D 倾斜转换，沿着 X 轴。| 
+| skewY(angle)| 定义 2D 倾斜转换，沿着 Y 轴。| 
+
+
+
+	
+	
+
+
+	
+	
+	
+	
+	
+	
 
 
