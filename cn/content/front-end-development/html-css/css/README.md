@@ -51,5 +51,109 @@
 | [:not\(selector\)](http://www.w3school.com.cn/cssref/selector_not.asp) | :not\(p\) | 选择非 &lt;p&gt; 元素的每个元素。 | 3 |
 | [::selection](http://www.w3school.com.cn/cssref/selector_selection.asp) | ::selection | 选择被用户选取的元素部分。 | 3 |
 
+#### CSS3渐变
+
+
+
+#### CSS3过渡
+通过 CSS3，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。
+#####浏览器支持				
+Internet Explorer 10、Firefox、Chrome 以及 Opera 支持 transition 属性。
+Safari 需要前缀 -webkit-。
+注释：Internet Explorer 9 以及更早的版本，不支持 transition 属性。
+注释：Chrome 25 以及更早的版本，需要前缀 -webkit-。
+#####它如何工作？
+CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。
+要实现这一点，必须规定两项内容：
+* 规定您希望把效果添加到哪个 CSS 属性上
+* 规定效果的时长
+
+实例
+应用于宽度属性的过渡效果，时长为 2 秒：
+```css
+div
+{
+transition: width 2s;
+-moz-transition: width 2s;	/* Firefox 4 */
+-webkit-transition: width 2s;	/* Safari 和 Chrome */
+-o-transition: width 2s;	/* Opera */
+}
+```
+注释：如果时长未规定，则不会有过渡效果，因为默认值是 0。
+效果开始于指定的 CSS 属性改变值时。CSS 属性改变的典型时间是鼠标指针位于元素上时：
+实例
+规定当鼠标指针悬浮于 <div> 元素上时：
+```css
+div:hover
+{
+width:300px;
+}
+```
+亲自试一试
+注释：当指针移出元素时，它会逐渐变回原来的样式。
+多项改变
+如需向多个样式添加过渡效果，请添加多个属性，由逗号隔开：
+实例
+向宽度、高度和转换添加过渡效果：
+```css
+div
+{
+transition: width 2s, height 2s, transform 2s;
+-moz-transition: width 2s, height 2s, -moz-transform 2s;
+-webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+-o-transition: width 2s, height 2s,-o-transform 2s;
+}
+```
+亲自试一试
+过渡属性
+下面的表格列出了所有的转换属性：
+属性	描述	CSS
+transition	简写属性，用于在一个属性中设置四个过渡属性。	3
+transition-property	规定应用过渡的 CSS 属性的名称。	3
+transition-duration	定义过渡效果花费的时间。默认是 0。	3
+transition-timing-function	规定过渡效果的时间曲线。默认是 "ease"。	3
+transition-delay	规定过渡效果何时开始。默认是 0。	3
+下面的两个例子设置所有过渡属性：
+实例
+在一个例子中使用所有过渡属性：
+```css
+div
+{
+transition-property: width;
+transition-duration: 1s;
+transition-timing-function: linear;
+transition-delay: 2s;
+/* Firefox 4 */
+-moz-transition-property:width;
+-moz-transition-duration:1s;
+-moz-transition-timing-function:linear;
+-moz-transition-delay:2s;
+/* Safari 和 Chrome */
+-webkit-transition-property:width;
+-webkit-transition-duration:1s;
+-webkit-transition-timing-function:linear;
+-webkit-transition-delay:2s;
+/* Opera */
+-o-transition-property:width;
+-o-transition-duration:1s;
+-o-transition-timing-function:linear;
+-o-transition-delay:2s;
+}
+```
+亲自试一试
+实例
+与上面的例子相同的过渡效果，但是使用了简写的 transition 属性：
+```css
+div
+{
+transition: width 1s linear 2s;
+/* Firefox 4 */
+-moz-transition:width 1s linear 2s;
+/* Safari and Chrome */
+-webkit-transition:width 1s linear 2s;
+/* Opera */
+-o-transition:width 1s linear 2s;
+}
+```
 
 
