@@ -22,28 +22,28 @@
 | :visited | a:visited | 选择所有已被访问的链接。 | 1 |
 | :active | a:active | 选择活动链接。 | 1 |
 | :hover | a:hover | 选择鼠标指针位于其上的链接。 | 1 |
-| [:focus](http://www.w3school.com.cn/cssref/selector_focus.asp) | input:focus | 选择获得焦点的 input 元素。 | 2 |
-| [:first-letter](http://www.w3school.com.cn/cssref/selector_first-letter.asp) | p:first-letter | 选择每个 &lt;p&gt; 元素的首字母。 | 1 |
-| [:first-line](http://www.w3school.com.cn/cssref/selector_first-line.asp) | p:first-line | 选择每个 &lt;p&gt; 元素的首行。 | 1 |
-| [:first-child](http://www.w3school.com.cn/cssref/selector_first-child.asp) | p:first-child | 选择属于父元素的第一个子元素的每个 &lt;p&gt; 元素。 | 2 |
-| [:before](http://www.w3school.com.cn/cssref/selector_before.asp) | p:before | 在每个 &lt;p&gt; 元素的内容之前插入内容。 | 2 |
-| [:after](http://www.w3school.com.cn/cssref/selector_after.asp) | p:after | 在每个 &lt;p&gt; 元素的内容之后插入内容。 | 2 |
-| [:lang\(language\)](http://www.w3school.com.cn/cssref/selector_lang.asp) | p:lang\(it\) | 选择带有以 "it" 开头的 lang 属性值的每个 &lt;p&gt; 元素。 | 2 |
-| [element1~element2](http://www.w3school.com.cn/cssref/selector_gen_sibling.asp) | p~ul | 选择前面有 &lt;p&gt; 元素的每个 &lt;ul&gt; 元素。 | 3 |
-| [\[attribute^=value\]](http://www.w3school.com.cn/cssref/selector_attr_begin.asp) | a\[src^="https"\] | 选择其 src 属性值以 "https" 开头的每个 &lt;`a`&gt; 元素。 | 3 |
-| [\[attribute$=value\]](http://www.w3school.com.cn/cssref/selector_attr_end.asp) | a\[src$=".pdf"\] | 选择其 src 属性以 ".pdf" 结尾的所有 &lt;`a`&gt; 元素。 | 3 |
-| [\[attribute\*=value\]](http://www.w3school.com.cn/cssref/selector_attr_contain.asp) | a\[src\*="abc"\] | 选择其 src 属性中包含 "abc" 子串的每个 &lt;`a`&gt; 元素。 | 3 |
-| [:first-of-type](http://www.w3school.com.cn/cssref/selector_first-of-type.asp) | p:first-of-type | 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:last-of-type](http://www.w3school.com.cn/cssref/selector_last-of-type.asp) | p:last-of-type | 选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:only-of-type](http://www.w3school.com.cn/cssref/selector_only-of-type.asp) | p:only-of-type | 选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:only-child](http://www.w3school.com.cn/cssref/selector_only-child.asp) | p:only-child | 选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:nth-child\(n\)](http://www.w3school.com.cn/cssref/selector_nth-child.asp) | p:nth-child\(2\) | 选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:nth-last-child\(n\)](http://www.w3school.com.cn/cssref/selector_nth-last-child.asp) | p:nth-last-child\(2\) | 同上，从最后一个子元素开始计数。 | 3 |
-| [:nth-of-type\(n\)](http://www.w3school.com.cn/cssref/selector_nth-of-type.asp) | p:nth-of-type\(2\) | 选择属于其父元素第二个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。 | 3 |
-| [:nth-last-of-type\(n\)](http://www.w3school.com.cn/cssref/selector_nth-last-of-type.asp) | p:nth-last-of-type\(2\) | 同上，但是从最后一个子元素开始计数。 | 3 |
-| [:last-child](http://www.w3school.com.cn/cssref/selector_last-child.asp) | p:last-child | 选择属于其父元素最后一个子元素每个 &lt;p&gt; 元素。 | 3 |
-| [:root](http://www.w3school.com.cn/cssref/selector_root.asp) | :root | 选择文档的根元素。 | 3 |
-| [:empty](http://www.w3school.com.cn/cssref/selector_empty.asp) | p:empty | 选择没有子元素的每个 &lt;p&gt; 元素（包括文本节点）。 | 3 |
+| :focus| input:focus | 选择获得焦点的 input 元素。 | 2 |
+| :first-letter| p:first-letter | 选择每个 &lt;p&gt; 元素的首字母。 | 1 |
+| :first-line| p:first-line | 选择每个 &lt;p&gt; 元素的首行。 | 1 |
+| :first-child | p:first-child | 选择属于父元素的第一个子元素的每个 &lt;p&gt; 元素。 | 2 |
+| :before | p:before | 在每个 &lt;p&gt; 元素的内容之前插入内容。 | 2 |
+| :after| p:after | 在每个 &lt;p&gt; 元素的内容之后插入内容。 | 2 |
+| :lang\(language\)| p:lang\(it\) | 选择带有以 "it" 开头的 lang 属性值的每个 &lt;p&gt; 元素。 | 2 |
+| element1~element2| p~ul | 选择前面有 &lt;`p`&gt; 元素的每个 &lt;`ul`&gt; 元素。 | 3 |
+| \[attribute^=value\] | a\[src^="https"\] | 选择其 src 属性值以 "https" 开头的每个 &lt;`a`&gt; 元素。 | 3 |
+| \[attribute$=value\]| a\[src$=".pdf"\] | 选择其 src 属性以 ".pdf" 结尾的所有 &lt;`a`&gt; 元素。 | 3 |
+| \[attribute\*=value\] | a\[src\*="abc"\] | 选择其 src 属性中包含 "abc" 子串的每个 &lt;`a`&gt; 元素。 | 3 |
+| :first-of-type| p:first-of-type | 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :last-of-type | p:last-of-type | 选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :only-of-type | p:only-of-type | 选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :only-child | p:only-child | 选择属于其父元素的唯一子元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :nth-child\(n\)| p:nth-child\(2\) | 选择属于其父元素的第二个子元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :nth-last-child\(n\) | p:nth-last-child\(2\) | 同上，从最后一个子元素开始计数。 | 3 |
+| :nth-of-type\(n\) | p:nth-of-type\(2\) | 选择属于其父元素第二个 &lt;`p`&gt; 元素的每个 &lt;`p`&gt; 元素。 | 3 |
+| :nth-last-of-type\(n\)| p:nth-last-of-type\(2\) | 同上，但是从最后一个子元素开始计数。 | 3 |
+| :last-child | p:last-child | 选择属于其父元素最后一个子元素每个 &lt;`p`&gt; 元素。 | 3 |
+| :root| :root | 选择文档的根元素。 | 3 |
+| :empty | p:empty | 选择没有子元素的每个 &lt;`p`&gt; 元素（包括文本节点）。 | 3 |
 | [:target](http://www.w3school.com.cn/cssref/selector_target.asp) | \#news:target | 选择当前活动的 \#news 元素。 | 3 |
 | [:enabled](http://www.w3school.com.cn/cssref/selector_enabled.asp) | input:enabled | 选择每个启用的 &lt;`input`&gt; 元素。 | 3 |
 | [:disabled](http://www.w3school.com.cn/cssref/selector_disabled.asp) | input:disabled | 选择每个禁用的 &lt;`input`&gt; 元素 | 3 |
@@ -156,4 +156,118 @@ transition: width 1s linear 2s;
 }
 ```
 
+#### CSS3 2D 转换
 
+CSS3 转换
+通过 CSS3 转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸。
+它如何工作？
+转换是使元素改变形状、尺寸和位置的一种效果。
+您可以使用 2D 或 3D 转换来转换您的元素。
+浏览器支持
+属性	浏览器支持
+transform					
+Internet Explorer 10、Firefox 以及 Opera 支持 transform 属性。
+Chrome 和 Safari 需要前缀 -webkit-。
+注释：Internet Explorer 9 需要前缀 -ms-。
+2D 转换
+在本章中，您将学到如下 2D 转换方法：
+translate()
+rotate()
+scale()
+skew()
+matrix()
+您将在下一章学习 3D 转换。
+实例
+div
+{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg);		/* IE 9 */
+-webkit-transform: rotate(30deg);	/* Safari and Chrome */
+-o-transform: rotate(30deg);		/* Opera */
+-moz-transform: rotate(30deg);		/* Firefox */
+}
+亲自试一试
+translate() 方法
+通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：
+实例
+div
+{
+transform: translate(50px,100px);
+-ms-transform: translate(50px,100px);		/* IE 9 */
+-webkit-transform: translate(50px,100px);	/* Safari and Chrome */
+-o-transform: translate(50px,100px);		/* Opera */
+-moz-transform: translate(50px,100px);		/* Firefox */
+}
+亲自试一试
+值 translate(50px,100px) 把元素从左侧移动 50 像素，从顶端移动 100 像素。
+rotate() 方法
+通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。
+实例
+div
+{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg);		/* IE 9 */
+-webkit-transform: rotate(30deg);	/* Safari and Chrome */
+-o-transform: rotate(30deg);		/* Opera */
+-moz-transform: rotate(30deg);		/* Firefox */
+}
+亲自试一试
+值 rotate(30deg) 把元素顺时针旋转 30 度。
+scale() 方法
+通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：
+实例
+div
+{
+transform: scale(2,4);
+-ms-transform: scale(2,4);	/* IE 9 */
+-webkit-transform: scale(2,4);	/* Safari 和 Chrome */
+-o-transform: scale(2,4);	/* Opera */
+-moz-transform: scale(2,4);	/* Firefox */
+}
+亲自试一试
+值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。
+skew() 方法
+通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：
+实例
+div
+{
+transform: skew(30deg,20deg);
+-ms-transform: skew(30deg,20deg);	/* IE 9 */
+-webkit-transform: skew(30deg,20deg);	/* Safari and Chrome */
+-o-transform: skew(30deg,20deg);	/* Opera */
+-moz-transform: skew(30deg,20deg);	/* Firefox */
+}
+亲自试一试
+值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度。
+matrix() 方法
+matrix() 方法把所有 2D 转换方法组合在一起。
+matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。
+实例
+如何使用 matrix 方法将 div 元素旋转 30 度：
+div
+{
+transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
+-moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
+-webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
+-o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+}
+亲自试一试
+新的转换属性
+下面的表格列出了所有的转换属性：
+属性	描述	CSS
+transform	向元素应用 2D 或 3D 转换。	3
+transform-origin	允许你改变被转换元素的位置。	3
+2D Transform 方法
+函数	描述
+matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。
+translate(x,y)	定义 2D 转换，沿着 X 和 Y 轴移动元素。
+translateX(n)	定义 2D 转换，沿着 X 轴移动元素。
+translateY(n)	定义 2D 转换，沿着 Y 轴移动元素。
+scale(x,y)	定义 2D 缩放转换，改变元素的宽度和高度。
+scaleX(n)	定义 2D 缩放转换，改变元素的宽度。
+scaleY(n)	定义 2D 缩放转换，改变元素的高度。
+rotate(angle)	定义 2D 旋转，在参数中规定角度。
+skew(x-angle,y-angle)	定义 2D 倾斜转换，沿着 X 和 Y 轴。
+skewX(angle)	定义 2D 倾斜转换，沿着 X 轴。
+skewY(angle)	定义 2D 倾斜转换，沿着 Y 轴。
